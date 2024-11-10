@@ -103,6 +103,7 @@
             <th>Price</th>
             <th>Brand</th>
             <th>Model Number</th>
+            <th>Image</th>
             <th>Manufactured Date</th>
             <th>Actions</th>
           </tr>
@@ -114,6 +115,9 @@
             <td th:text="|${product.price} Rs.|">Price</td>
             <td th:text="${product.brand}">Brand</td>
             <td th:text="${product.modelNumber}">Model Number</td>
+            <td>
+              <img th:src="@{|/images/${product.imgName}.jpg|}" alt="Product Image" width="100">
+            </td>
             <td th:text="${#dates.format(product.manufacturedDate, 'yyyy-MM-dd')}"></td>
             <td style="white-space:nowrap">
               <a class="btn btn-primary btn-sm" th:href="@{/edit(id=${product.id})}">Edit</a>
