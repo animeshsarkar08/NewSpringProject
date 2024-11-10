@@ -100,6 +100,7 @@ public class ProductController {
 		product.setWarranty(productDto.getWarranty());
 		product.setBatteryLife(productDto.getBatteryLife());
 		product.setRating(productDto.getRating());
+		product.setImgName(productDto.getImgName());
 		product.setManufacturedDate(manufacturedDate); // Assuming you want to set the current date
 		
 		//INSERT INTO products (name,...,manufactured_date) VALUES (...);
@@ -151,6 +152,7 @@ public class ProductController {
 			productDto.setWarranty(product.getWarranty());
 			productDto.setBatteryLife(product.getBatteryLife());
 			productDto.setRating(product.getRating());
+			productDto.setImgName(product.getImgName());
 			
 			model.addAttribute("productDto",productDto);
 
@@ -183,6 +185,7 @@ public class ProductController {
 			product.setWarranty(productDto.getWarranty());
 			product.setBatteryLife(productDto.getBatteryLife());
 			product.setRating(productDto.getRating());
+			product.setImgName(productDto.getImgName());
 			
 			//UPDATE products SET name = ..., price= ... WHERE product.id = request.id;
 			repo.save(product);
