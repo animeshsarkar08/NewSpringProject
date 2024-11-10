@@ -32,7 +32,7 @@ public class ProductDto {
 		 @NotNull(message = "Rating is required")
 		 @Min(value = 1, message = "Rating must be at least 1")
 	    private double rating;
-	    
+	       private String imgName;
 		 	public String getName() {
 				return name;
 			}
@@ -96,5 +96,13 @@ public class ProductDto {
 			public void setRating(double rating) {
 				this.rating = rating;
 			}
+
+	public String getImgName() {
+		return imgName;
+	}
+
+	public void setImgName(String imgName) {
+		this.imgName = imgName;
+	}
 
 }
