@@ -5,7 +5,7 @@ import java.util.Date;
 import jakarta.persistence.*;
 
 @Entity //This class represents an object or row in the database
-@Table(name="products") //Defining the name of the table
+@Table(name="electronics") //Defining the name of the table
 public class Product {
 
 	@Id
@@ -24,6 +24,7 @@ public class Product {
     @Column(columnDefinition = "TEXT")//This annotation shows that the below column
     //has TEXT data type otherwise database will assume as VARCHAR
     private Date manufacturedDate;
+    private String imgName;
 
 	public int getId() {
 		return id;
@@ -96,7 +97,13 @@ public class Product {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
+	public String getImgName() {
+		return imgName;
+	}
 
+	public void setImgName(String imgName) {
+		this.imgName = imgName;
+	}
 	public Date getManufacturedDate() {
 		return manufacturedDate;
 	}
