@@ -152,6 +152,29 @@
           </div>
         </div>
 
+        <!-- Product Type Dropdown -->
+        <div class="row mb-3">
+          <label for="productType" class="col-sm-4 col-form-label">Product Type</label>
+          <div class="col-sm-8">
+            <select id="productType" th:field="${productDto.imgName}" class="form-control">
+              <option value="" disabled selected>Select product type</option>
+              <option value="HP-laptop">HP Laptop</option>
+              <option value="Dell-laptop">Dell Laptop</option>
+              <option value="Razor-laptop">Razor Laptop</option>
+              <option value="Lenovo-laptop">Lenovo Laptop</option>
+              <option value="msi-laptop">MSI Laptop</option>
+              <option value="apple-mouse">Mouse</option>
+              <option value="keyboard">Keyboard</option>
+              <option value="tablet">Tablet</option>
+              <option value="ipad">iPad</option>
+              <option value="smartphone">Smartphone</option>
+              <option value="headphone">Headphone</option>
+              <option value="smartwatch">Smartwatch</option>
+            </select>
+            <p th:if="${#fields.hasErrors('imgName')}" class="text-danger" th:errors="${productDto.imgName}">Product Type Error</p>
+          </div>
+        </div>
+
         <!-- Submit Button -->
         <div class="row">
           <div class="offset-sm-4 col-sm-4 d-grid">
