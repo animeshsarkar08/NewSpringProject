@@ -106,6 +106,7 @@
         <div class="product-cell">Price</div>
         <div class="product-cell">Brand</div>
         <div class="product-cell">Model Number</div>
+        <div class="product-cell">Image</div>
         <div class="product-cell">Manufactured Date</div>
         <div class="product-cell">Actions</div>
       </div>
@@ -116,6 +117,9 @@
         <div class="product-cell" th:text="|${product.price} Rs.|">Price</div>
         <div class="product-cell" th:text="${product.brand}">Brand</div>
         <div class="product-cell" th:text="${product.modelNumber}">Model Number</div>
+        <div>
+              <img th:src="@{|/images/${product.imgName}.jpg|}" alt="Product Image" width="100">
+        </div>
         <div class="product-cell" th:text="${#dates.format(product.manufacturedDate, 'yyyy-MM-dd')}"></div>
         <div class="product-cell product-actions">
           <a class="btn btn-primary btn-sm" th:href="@{/edit(id=${product.id})}">Edit</a>
